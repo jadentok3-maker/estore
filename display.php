@@ -19,19 +19,17 @@
             {
                 echo "<table>
                         <tr>
-                            <th>ID</th>
                             <th>Name</th>
                             <th>Price</th>
-                            <th>Description</th>
+                            <th>Quantity</th>
                         </tr>";
             
                 while ($row = $result->fetch_assoc()) 
                 {
                     echo "<tr>
-                            <td>" . $row["id"] . "</td>
-                            <td>" . $row["name"] . "</td>
-                            <td>$" . $row["price"] . "</td>
-                            <td>" . $row["description"] . "</td>
+                            <td>" . htmlspecialchars($row["name"]) . "</td>
+                            <td>$" . number_format($row["price"], 2) . "</td>
+                            <td>" . $row["qty"] . "</td>
                         </tr>";
                 }
                     echo "</table>";
