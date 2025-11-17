@@ -22,7 +22,7 @@ if (isset($_POST['add'])) {
 
     if (mysqli_query($conn, $sql)) {
         echo "Product added successfully!";
-        header("display.php");
+        header("location:display.php");
         exit();
     } else {
         echo "Error: " . mysqli_error($conn);
