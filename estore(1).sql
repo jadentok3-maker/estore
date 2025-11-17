@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 17, 2025 at 05:35 AM
+-- Generation Time: Nov 17, 2025 at 06:19 AM
 -- Server version: 9.1.0
 -- PHP Version: 8.3.14
 
@@ -34,6 +34,14 @@ CREATE TABLE IF NOT EXISTS `estore` (
   `qty` int NOT NULL,
   PRIMARY KEY (`name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `estore`
+--
+
+INSERT INTO `estore` (`name`, `price`, `qty`) VALUES
+('bottle', 5, 5),
+('car', 100, 2);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
