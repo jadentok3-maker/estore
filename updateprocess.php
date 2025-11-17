@@ -1,28 +1,26 @@
-        <?php
+<?php
 
-              $updatePrice = $_POST["updateprice"]
-                $name = $_POST["name"]
-        require_once("dbInfo.php");
+$updatePrice = $_POST["updateprice"];
+$name = $_POST["name"];
+require_once("dbInfo.php");
 
-        $mysqli = new mysqli($hostname,$dbUser,$dbPassword,$db); 
+$mysqli = new mysqli($hostname,$dbUser,$dbPassword,$db); 
 
-        // Check connection
-        if ($mysqli -> connect_errno) {
+// Check connection
+if ($mysqli -> connect_errno) {
         echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
         exit();
-        }
+}
 
-        $sqlStatement = "UPDATE estore set price = "$updateprice" where name= "$name" ";
+$sqlStatement = "UPDATE estore set price = '$updatePrice' where name= '$name' ";
 
-        $result = $mysqli -> query($sqlStatement); 
-        while($record = $result -> fetch_assoc()){
-            
-        }
-        $result->free_result();
+$result = $mysqli -> query($sqlStatement); 
 
-        $mysqli->close();
- header("location: display.php");
-    ?>
+$result->free_result();
+
+$mysqli->close();
+header("location: display.php");
+?>
 
     
       
