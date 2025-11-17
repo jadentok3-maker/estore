@@ -1,11 +1,11 @@
 <?php
-    $database = require_once("dbinfo.php");
+    require_once("dbinfo.php");
 
     $sql = "SELECT name, price, qty FROM estore";
 
     // Fatal error: Uncaught Error: Call to a member function query() on int in C:\wamp64\www\estore\display.php on line 5
     // Error: Call to a member function query() on int in C:\wamp64\www\estore\display.php on line 5
-    $result = $database->query($sql);
+    $result = $mysqli->query($sql);
 
     echo "<!DOCTYPE html>
     <html lang='en'>
@@ -42,7 +42,7 @@
                 echo "No products found.";
             }
         
-    $database->close();
+    $mysqli->close();
 
     echo "</body>
     </html>";
