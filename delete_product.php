@@ -6,7 +6,7 @@ $name = $_POST['name'];
 
     $sqli = "DELETE FROM estore WHERE name='$name'";
 
-    $result1 = $mysqli->query($sql1);
+    $mysqli->query($sqli);
     $mysqli->close();
     header("location: index.html?success=111111");
 ?>
