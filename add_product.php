@@ -17,7 +17,7 @@ if (isset($_POST['add'])) {
     $price = $_POST['price'];
     $qty = $_POST['qty'];
 
-    $sql = "INSERT INTO products (name, price, qty)
+    $sql = "INSERT INTO estore (name, price, qty)
             VALUES ('$name', '$price', '$qty')";
 
     if (mysqli_query($conn, $sql)) {
