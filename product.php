@@ -19,7 +19,7 @@ if (isset($_POST['add'])) {
 
     if (mysqli_query($conn, $sql)) {
         echo "Product added successfully!";
-        header("");
+        header("display.php");
         exit();
     } else {
         echo "Error: " . mysqli_error($conn);
