@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESTER</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <h1>Add Product</h1>
-    <button>+ Add Product</button>
-</body>
+    <form action="product.php" method="POST">
+        <label for="name">Product Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" required>
+        <label for="qty">Quantity:</label>
+        <input type="number" id="qty" name="qty" required>
+        <button type="submit" name="add">+ Add Product</button>
+    </form>
 </html>
